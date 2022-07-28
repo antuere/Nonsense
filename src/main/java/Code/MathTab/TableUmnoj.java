@@ -1,6 +1,9 @@
 package Code.MathTab;
 
 import java.util.Scanner;
+import org.apache.commons.io.FileUtils;
+
+import java.io.File;
 
 public class TableUmnoj {
     public static int[][] MULTIPLICATION_TABLE;

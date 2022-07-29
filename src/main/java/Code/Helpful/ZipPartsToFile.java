@@ -24,10 +24,11 @@ public class ZipPartsToFile {
                 outputStream.write(zipInputStream.readAllBytes());
 
 
+            }
+
         }
-
     }
-
+}
 
 //public class Solution {
 //    public static void main(String[] args) throws IOException {
@@ -65,4 +66,4 @@ public class ZipPartsToFile {
 //        }
 //    }
 //}
-}
+

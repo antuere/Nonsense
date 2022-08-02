@@ -5,7 +5,7 @@ import java.util.Date;
 public class FindPrefix {
     public static void main(String[] args) {
 
-        String[] words = {"Anton", "nton", "Antos", "Antrn"};
+        String[] words = {"Antonsad", "Antona", "Antos", "Antrn"};
 
 
         String result = findPrefix(words);
@@ -54,25 +54,19 @@ public class FindPrefix {
 
         StringBuilder result = new StringBuilder();
 
-        int countRepeat = 1;
 
-        for (int i = 0; i < strings[0].length(); i++) {
-            for (int j = 0, k = 1; k < strings.length; j++, k++) {
+        for (int j = 0; j < strings[0].length(); j++) {
+            char currentChar = strings[0].charAt(j);
 
-                if (strings[j].charAt(i) == strings[k].charAt(i)) {
-                    countRepeat++;
-                } else {
-                    break;
+            for (int i = 1; i < strings.length; i++) {
+                if (currentChar != strings[i].charAt(j) && strings[i].length() <= j) {
+                    return result.toString();
                 }
             }
-            if (countRepeat == strings.length) {
-                result.append(strings[0].charAt(i));
-                countRepeat = 1;
-            } else {
-                break;
-            }
+
+            result.append(currentChar);
         }
 
-        return result.toString().trim();
+        return result.toString();
     }
 }

@@ -2,7 +2,7 @@ package Code.Helpful;
 
 import java.util.Date;
 
-public class FindPrefix {
+public class FindPrefix{
     public static void main(String[] args) {
 
         String[] words = {"Antonchic", "Antona", "Antos", "Antorn"};
@@ -18,9 +18,7 @@ public class FindPrefix {
     }
 
     public static String findPrefix(String[] strings) {
-
         StringBuilder result = new StringBuilder();
-
         int countRepeat = 1;
 
         for (int i = 0; i < strings[0].length(); i++) {
